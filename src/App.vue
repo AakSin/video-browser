@@ -11,7 +11,7 @@ import axios from 'axios';
 import SearchBar from "./components/SearchBar";
 import VideoList from "./components/VideoList";
 
-const API_KEY = "AIzaSyAJqv7VTUVNeTrwGBS4BVY-yaB_NrLb6Jg";
+const API_KEY = "";
 export default {
  name:"App",
  components: {

@@ -4,6 +4,7 @@
         v-for="video in videos"
         v-bind:video="video"
         :key="video.etag"
+        @videoSelect="onVideoSelect"
         >
         </VideoListItem>
     </ul>    
