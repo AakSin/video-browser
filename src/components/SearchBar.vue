@@ -6,7 +6,7 @@
 
 <script>
 export default {
-    name:"Search Bar",
+    name:"SearchBar",
     methods: {
         onInput:function(event){
             this.$emit("termChange",event.target.value);

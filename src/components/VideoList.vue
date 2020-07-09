@@ -14,10 +14,13 @@ import VideoListItem from "./VideoListItem";
 export default {
     name:"VideoList",
     components: { VideoListItem },
-    props:{
-        videos: Array
+    props: {videos: Array},
+    methods:{
+        onVideoSelect(video){
+           this.$emit("videoSelect",video);
         }
-    };
+    }
+}
 </script>
 <style>
 
