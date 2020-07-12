@@ -3,7 +3,9 @@
         <SearchBar v-on:termChange="onTermChange"></SearchBar>
         <VideoDetail v-if=this.selected v-bind:video="this.selected" />
         <VideoList @videoSelect="onVideoSelect" v-bind:videos="videos"> </VideoList>
+        {{errorText}}
     </div>
+    
 </template>
 
 <script>
@@ -22,7 +24,8 @@ export default {
  data(){
      return{
          videos:[],
-         selected:null
+         selected:null,
+         errorText:""
      }
  },
  methods: { 
@@ -42,6 +45,9 @@ export default {
         })
         .then(response=>{
             this.videos=response.data.items
+        })
+        .catch(response => {
+            this.errorText=response.message;
         });
  } }   
 };
